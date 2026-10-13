@@ -1,0 +1,181 @@
+RAG Pipeline Sample Output
+
+Loading: Payments_Customer_Support.pdf
+Loading: Return_Refund_Warranty.pdf
+Loading: Shipping_Delivery_Guide.pdf
+
+PDF loading completed.
+Total PDF files found: 3
+Total pages loaded: 9
+
+Chunking completed.
+Total chunks created: 26
+Average chunk size: 406.15 characters
+
+Sample Chunks:
+
+--- Chunk 1 ---
+Sample e-commerce policy document for RAG pipeline testing
+Page 1
+ Payments and Customer Support Guide
+ Payment options, cancellations, customer support, bulk orders,and gift services
+Purpose: This document is a fictional sample created for an academic Retrieval Augmented
+Generation project. It is designed to provide clear policy content for PDF chunking, embeddings,
+FAISS retrieval, and semantic search.
+Quick Reference
+ Topic
+Policy Summary
+Payment methods
+Source: data/Payments_Customer_Support.pdf
+Page: 0
+
+--- Chunk 2 ---
+FAISS retrieval, and semantic search.
+Quick Reference
+ Topic
+Policy Summary
+Payment methods
+Visa, MasterCard, American Express, PayPal, and UPI
+Cancellation window
+Within 2 hours of order placement when eligible
+Support email
+support@example.com
+Support phone
++1-800-123-4567
+Support hours
+9 AM to 6 PM, Monday to Friday
+1. Accepted Payment Methods
+Customers can use several payment options at checkout.
+Supported methods
+ Visa credit and debit cards.
+ MasterCard credit and debit cards.
+Source: data/Payments_Customer_Support.pdf
+Page: 0
+
+--- Chunk 3 ---
+Supported methods
+ Visa credit and debit cards.
+ MasterCard credit and debit cards.
+ American Express cards.
+ PayPal.
+ UPI payments.
+Payment confirmation
+An order confirmation is created only after the payment provider reports a successful transaction.
+Customers should keep the confirmation email for reference.
+Source: data/Payments_Customer_Support.pdf
+Page: 0
+
+Loading local Hugging Face embedding model...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████| 103/103 [00:00<00:00, 6197.74it/s]
+Hugging Face embedding model loaded successfully.
+
+Creating FAISS vector store...
+FAISS vector store created successfully.
+FAISS index saved locally.
+
+Running semantic search...
+
+User Query:
+What is the return policy for customers?
+
+Top Matching Result:
+Quick Reference
+ Topic
+Policy Summary
+Standard return window
+30 calendar days from delivery
+Damage reporting
+Within 48 hours of delivery
+Refund processing
+Usually 5 to 7 business days after approval
+Electronics warranty
+1 year manufacturer warranty unless stated otherwise
+1. Return Eligibility
+Customers may request a return within 30 calendar days from thedelivery date. The item must meet the
+eligibility conditions below.
+Eligible items
+
+Source Information:
+Source: data/Return_Refund_Warranty.pdf
+Page: 0
+
+Testing multiple semantic queries...
+
+============================================================
+Query:
+How long do customers have to return an item?
+
+Top Matching Chunk:
+Quick Reference
+ Topic
+Policy Summary
+Standard return window
+30 calendar days from delivery
+Damage reporting
+Within 48 hours of delivery
+Refund processing
+Usually 5 to 7 business days after approval
+Electronics warranty
+1 year manufacturer warranty unless stated otherwise
+1. Return Eligibility
+Customers may request a return within 30 calendar days from thedelivery date. The item must meet the
+eligibility conditions below.
+Eligible items
+
+Source:
+data/Return_Refund_Warranty.pdf
+Page:
+0
+
+============================================================
+Query:
+How long does international delivery usually take?
+
+Top Matching Chunk:
+Quick Reference
+ Topic
+Policy Summary
+Order processing
+Usually within 1 business day
+Domestic metro delivery
+Usually 3 to 5 business days
+Other domestic delivery
+Usually 5 to 8 business days
+International delivery
+Usually 7 to 15 business days
+Tracking link
+Sent by email and SMS after shipment
+1. Shipping Coverage
+Orders can be delivered domestically and to selected international destinations.
+Domestic shipping
+
+Source:
+data/Shipping_Delivery_Guide.pdf
+Page:
+0
+
+============================================================
+Query:
+Which payment methods are accepted?
+
+Top Matching Chunk:
+Supported methods
+ Visa credit and debit cards.
+ MasterCard credit and debit cards.
+ American Express cards.
+ PayPal.
+ UPI payments.
+Payment confirmation
+An order confirmation is created only after the payment provider reports a successful transaction.
+Customers should keep the confirmation email for reference.
+
+Source:
+data/Payments_Customer_Support.pdf
+Page:
+0
+
+Groq model initialized successfully.
+
+Final RAG Answer:
+Customers have 30 calendar days from the delivery date to return an item.
